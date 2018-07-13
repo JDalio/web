@@ -14,18 +14,6 @@
     <link rel="stylesheet" href="./css/global.css">
 </head>
 <style>
-    html, body {
-        height: 100%;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        font-size: 17px;
-        min-width: 768px;
-        font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif
-    }
-
     .el-container {
         margin: auto;
         width: 960px;
@@ -38,9 +26,10 @@
         background-color: #E9EEF3;
         color: #333;
         text-align: center;
-        line-height: 160px;
     }
 
+    .main-carousel {
+    }
     .el-aside {
         width: 33%;
         background-color: #D3DCE6;
@@ -54,6 +43,24 @@
         background-color: #D3DCE6;
     }
 
+</style>
+<!-- test style -->
+<style>
+    .el-carousel__item h3 {
+        color: #475669;
+        font-size: 18px;
+        opacity: 0.75;
+        line-height: 300px;
+        margin: 0;
+    }
+
+    .el-carousel__item:nth-child(2n) {
+        background-color: #99a9bf;
+    }
+
+    .el-carousel__item:nth-child(2n+1) {
+        background-color: #d3dce6;
+    }
 </style>
 <body>
 
@@ -69,18 +76,14 @@
         <el-col :span="1" class="nav-col">
             <a href="/"><img class="nav_link" src="./img/phone.png" alt="手机客户端"></a>
         </el-col>
-        <el-col :span="9" class="nav-col">
-            <div class="grid-content bg-purple"></div>
-        </el-col>
+        <el-col :span="9" class="nav-col"> <!-- 日后扩展 --> </el-col>
         <el-col :span="2" class="nav-col">
             <el-button round class="sign_in" style="padding-left: 0;padding-right: 0;">登录</el-button>
         </el-col>
         <el-col :span="2" class="nav-col">
             <el-button round class="sign_up" style="padding-left: 0;padding-right: 0;">注册</el-button>
         </el-col>
-        <el-col :span="4" class="nav-col">
-            <div class="grid-content bg-purple"></div>
-        </el-col>
+        <el-col :span="4" class="nav-col"> <!-- 日后扩展 --> </el-col>
     </el-row>
 
 </nav>
@@ -88,7 +91,17 @@
 
 <div class="el-container">
 
-    <div class="el-main">Main</div>
+    <div class="el-main">
+        <div id="main-carousel">
+            <el-carousel>
+                <el-carousel-item v-for="item in 4" :key="item">
+                    <h3>{{ item }}</h3>
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+    </div>
+
+
     <div class="el-aside">aside</div>
 </div>
 
@@ -105,6 +118,8 @@
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script>
     new Vue().$mount('nav')
+    new Vue().$mount('#main-carousel')
+
 </script>
 
 </html>

@@ -46,7 +46,7 @@ nav {
 
 .sign_in {
     border: 0;
-    width: 90%;
+    min-width: 90%;
     height: 36px;
     margin-top: 10px;
     padding-left: 0;
@@ -56,6 +56,6 @@ nav {
     height: 36px;
     border-color: #ea6f5a;
     margin-top: 10px;
-    width: 90%;
+    min-width: 90%;
     padding-left: 0;
 }
