@@ -61,29 +61,37 @@
     .el-carousel__item:nth-child(2n+1) {
         background-color: #d3dce6;
     }
+
+    .grid-content {
+        /*border-radius: 4px;*/
+        /*min-height: 20px;*/
+        /*background-color: #E9EEF3;*/
+    }
 </style>
 <body>
 
 <nav>
 
     <el-row :gutter="20" class="nav-row">
+        <el-col :span="5" class="nav-col ">
+            <a href="/"><img class="logo grid-content" src="./img/logo.png" alt="灯塔名师"></a>
+        </el-col>
+        <el-col :span="1" class="nav-col">
+            <a href="/"> <img class="nav_link grid-content" src="./img/home.png" alt="主页"></a>
+        </el-col>
+        <el-col :span="1" class="nav-col">
+            <a href="/"><img class="nav_link grid-content" src="./img/phone.png" alt="手机客户端"></a>
+        </el-col>
+        <el-col :span="8" class="nav-col" style="min-width: 430px;">
+            <div class="grid-content"></div> <!-- 日后扩展 --> </el-col>
+        <el-col :span="2" class="nav-col sign-btn">
+            <el-button round class="sign_in grid-content" style="padding-left: 0;padding-right: 0;">登录</el-button>
+        </el-col>
+        <el-col :span="2" class="nav-col sign-btn">
+            <el-button round class="sign_up grid-content" style="padding-left: 0;padding-right: 0;">注册</el-button>
+        </el-col>
         <el-col :span="5" class="nav-col">
-            <a href="/"><img class="logo" src="./img/logo.png" alt="灯塔名师"></a>
-        </el-col>
-        <el-col :span="1" class="nav-col">
-            <a href="/"> <img class="nav_link" src="./img/home.png" alt="主页"></a>
-        </el-col>
-        <el-col :span="1" class="nav-col">
-            <a href="/"><img class="nav_link" src="./img/phone.png" alt="手机客户端"></a>
-        </el-col>
-        <el-col :span="9" class="nav-col"> <!-- 日后扩展 --> </el-col>
-        <el-col :span="2" class="nav-col">
-            <el-button round class="sign_in" style="padding-left: 0;padding-right: 0;">登录</el-button>
-        </el-col>
-        <el-col :span="2" class="nav-col">
-            <el-button round class="sign_up" style="padding-left: 0;padding-right: 0;">注册</el-button>
-        </el-col>
-        <el-col :span="4" class="nav-col"> <!-- 日后扩展 --> </el-col>
+            <div class="grid-content"></div><!-- 日后扩展 --> </el-col>
     </el-row>
 
 </nav>

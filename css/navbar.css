@@ -1,14 +1,8 @@
-/*.grid-content {*/
-/*border-radius: 4px;*/
-/*min-height: 36px;*/
-/*background-color: #E9EEF3;*/
-/*}*/
-
 nav {
     display: block;
     box-sizing: border-box;
     /*background-color: antiquewhite;*/
-
+    overflow: hidden;
     height: 56px;
     width: 100%;
     min-height: 50px;
@@ -44,9 +38,13 @@ nav {
     display: inline;
 }
 
+.sign-btn {
+    min-width: 110px;
+    max-width: 130px;
+}
 .sign_in {
     border: 0;
-    min-width: 90%;
+    width: 100%;
     height: 36px;
     margin-top: 10px;
     padding-left: 0;
@@ -56,6 +54,6 @@ nav {
     height: 36px;
     border-color: #ea6f5a;
     margin-top: 10px;
-    min-width: 90%;
+    width: 100%;
     padding-left: 0;
 }
