@@ -23,14 +23,12 @@
 
     .el-main {
         width: 67%;
-        background-color: #E9EEF3;
+        /*background-color: #E9EEF3;*/
         color: #333;
         text-align: center;
         padding-top: 0;
     }
 
-    .main-carousel {
-    }
     .el-aside {
         width: 33%;
         background-color: #D3DCE6;
@@ -39,6 +37,25 @@
         line-height: 200px;
     }
 
+    #entrance {
+        padding-top: 50px;
+        active-text-color: #fff;
+    }
+
+    .entrance-li {
+        height: 60px;
+        padding-bottom: 8px;
+        padding-right: 8px;
+    }
+
+    .entrance-li:hover {
+        background-color: #fff;
+    }
+
+    .entrance-img {
+        height: 100%;
+        width: 100%;
+    }
     footer {
         height: 120px;
         background-color: #D3DCE6;
@@ -47,6 +64,7 @@
 </style>
 <!-- test style -->
 <style>
+
     .el-carousel__item h3 {
         color: #475669;
         font-size: 18px;
@@ -54,20 +72,18 @@
         line-height: 300px;
         margin: 0;
     }
-
     .el-carousel__item:nth-child(2n) {
         background-color: #99a9bf;
     }
-
     .el-carousel__item:nth-child(2n+1) {
         background-color: #d3dce6;
     }
 
-    .grid-content {
+    /*.grid-content {*/
         /*border-radius: 4px;*/
         /*min-height: 20px;*/
         /*background-color: #E9EEF3;*/
-    }
+    /*}*/
 </style>
 <body>
 
@@ -111,7 +127,19 @@
     </div>
 
 
-    <div class="el-aside">aside</div>
+    <div class="el-aside">
+        <el-menu id="entrance">
+            <el-menu-item index="1" class="entrance-li" style="padding-left: 10px;">
+                <a href="/"> <img class="entrance-img" src="./img/kaoyan.png" alt="考研辅导"></a>
+            </el-menu-item>
+            <el-menu-item index="2" class="entrance-li" style="padding-left: 10px;">
+                <a href="/"> <img class="entrance-img" src="./img/findexp.png" alt="找实验室"></a>
+            </el-menu-item>
+            <el-menu-item index="3" class="entrance-li" style="padding-left: 10px;">
+                <a href="/"> <img class="entrance-img" src="./img/startsci.png" alt="科学启蒙教育"></a>
+            </el-menu-item>
+        </el-menu>
+    </div>
 </div>
 
 
@@ -128,7 +156,18 @@
 <script>
     new Vue().$mount('nav')
     new Vue().$mount('#main-carousel')
-
+    var Main = {
+        methods: {
+            handleOpen(key, keyPath) {
+                console.log(key, keyPath);
+            },
+            handleClose(key, keyPath) {
+                console.log(key, keyPath);
+            }
+        }
+    }
+    var Ctor = Vue.extend(Main)
+    new Ctor().$mount('#entrance')
 </script>
 
 </html>
