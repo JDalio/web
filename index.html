@@ -31,15 +31,15 @@
 
     .el-aside {
         width: 33%;
-        background-color: #D3DCE6;
+        /*background-color: #D3DCE6;*/
         color: #333;
         text-align: center;
-        line-height: 200px;
+        /*line-height: 200px;*/
     }
 
     #entrance {
-        padding-top: 50px;
         active-text-color: #fff;
+        border-right: 0;
     }
 
     .entrance-li {
@@ -48,10 +48,14 @@
         padding-right: 8px;
     }
 
-    .entrance-li:hover {
+    .entrance-li :hover {
         background-color: #fff;
     }
 
+    #aside-wechat :hover {
+        color: #000;
+        background-color: transparent;
+    }
     .entrance-img {
         height: 100%;
         width: 100%;
@@ -138,7 +142,28 @@
             <el-menu-item index="3" class="entrance-li" style="padding-left: 10px;">
                 <a href="/"> <img class="entrance-img" src="./img/startsci.png" alt="科学启蒙教育"></a>
             </el-menu-item>
+            <!-- could add more menu items in the future -->
+            <!--<el-menu-item index="4" class="" style="padding-left: 10px; height: 160px;">-->
+            <!--</el-menu-item>-->
         </el-menu>
+
+        <el-popover id="aside-wechat" placement="top" trigger="hover">
+            <img src="./img/wechat.png" alt="微信联系我们" style="height: 140px; width:275px;">
+            <el-button slot="reference"
+                       style="width: 93.5%;height:80px;padding-top:9px;padding-left: 0;margin-top: 30px">
+                <img src="./img/lighthouse.jpg" alt="灯塔名师微信公众号"
+                     style="padding-left: 20px; height: 60px;width: 60px;display: inline;float: left;">
+                <ul class="info" style="display: inline;list-style: none;position: relative;left: 10px;">
+                    <li style="font-size: 16px;line-height: 20px;text-align: left;position: relative;top: -4px;">
+                        微信关注灯塔名师
+                    </li>
+                    <li style="font-size: 13px;line-height: 28px;text-align: left;position: relative;top: -3px;">
+                        名师指路，少走弯路
+                    </li>
+                </ul>
+            </el-button>
+        </el-popover>
+
     </div>
 </div>
 
@@ -156,18 +181,8 @@
 <script>
     new Vue().$mount('nav')
     new Vue().$mount('#main-carousel')
-    var Main = {
-        methods: {
-            handleOpen(key, keyPath) {
-                console.log(key, keyPath);
-            },
-            handleClose(key, keyPath) {
-                console.log(key, keyPath);
-            }
-        }
-    }
-    var Ctor = Vue.extend(Main)
-    new Ctor().$mount('#entrance')
+    new Vue().$mount('#entrance')
+    new Vue().$mount('#aside-wechat')
 </script>
 
 </html>
