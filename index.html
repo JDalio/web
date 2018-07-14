@@ -56,10 +56,56 @@
         color: #000;
         background-color: transparent;
     }
+
     .entrance-img {
         height: 100%;
         width: 100%;
     }
+
+    /* 考研热门 科研热点 */
+    .hot-collection {
+        /*background-color: #ea6f5a;*/
+        padding-left: 5px;
+        margin-top: 10px;
+        margin-bottom: 18px;
+        text-align: left;
+    }
+
+    .hot-collection .collection {
+        display: inline-block;
+        margin: 0 18px 18px 0;
+        min-height: 32px;
+        background-color: #f7f7f7;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        vertical-align: top;
+        overflow: hidden;
+    }
+
+    .hot-collection .collection img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hot-collection .collection .name {
+        display: inline-block;
+        padding: 0 11px 0 6px;
+        font-size: 14px;
+        color: black;
+
+    }
+
+    .hot-collection .more-collection {
+        display: inline-block;
+        margin-top: 7px;
+        font-size: 14px;
+        color: #787878;
+    }
+
+    .hot-collection .more-collection i {
+        margin-left: 0;
+    }
+
     footer {
         height: 120px;
         background-color: #D3DCE6;
@@ -76,17 +122,19 @@
         line-height: 300px;
         margin: 0;
     }
+
     .el-carousel__item:nth-child(2n) {
         background-color: #99a9bf;
     }
+
     .el-carousel__item:nth-child(2n+1) {
         background-color: #d3dce6;
     }
 
     /*.grid-content {*/
-        /*border-radius: 4px;*/
-        /*min-height: 20px;*/
-        /*background-color: #E9EEF3;*/
+    /*border-radius: 4px;*/
+    /*min-height: 20px;*/
+    /*background-color: #E9EEF3;*/
     /*}*/
 </style>
 <body>
@@ -121,12 +169,107 @@
 <div class="el-container">
 
     <div class="el-main">
-        <div id="main-carousel">
-            <el-carousel>
-                <el-carousel-item v-for="item in 4" :key="item">
-                    <h3>{{ item }}</h3>
-                </el-carousel-item>
-            </el-carousel>
+        <!-- 主页走马灯 -->
+        <el-carousel id="main-carousel">
+            <el-carousel-item v-for="item in 4" :key="item">
+                <h3>{{ item }}</h3>
+            </el-carousel-item>
+        </el-carousel>
+        <!-- 考研热门 -->
+        <div class="hot-collection" style="margin-top: 40px">
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/283250/%E6%BC%AB%E7%94%BB%E4%B8%93%E9%A2%98.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">手绘</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">社会热点</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/95/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">故事</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/494271/51164a1egd7b1a4a7c491_690.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">人文社科</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">摄影</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">读书</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/14/6249340_194140034135_2.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">@IT·互联网</div>
+            </a>
+
+            <a class="more-collection" target="" href="/">
+                更多考研专题 <i class="el-icon-arrow-right"></i>
+            </a>
+        </div>
+        <!-- 科研热点 -->
+        <div class="hot-collection">
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/283250/%E6%BC%AB%E7%94%BB%E4%B8%93%E9%A2%98.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">手绘</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">社会热点</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/95/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">故事</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/494271/51164a1egd7b1a4a7c491_690.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">人文社科</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">摄影</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">读书</div>
+            </a>
+
+            <a class="collection" target="" href="/">
+                <img src="https://upload.jianshu.io/collections/images/14/6249340_194140034135_2.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+                     alt="64">
+                <div class="name">@IT·互联网</div>
+            </a>
+
+            <a class="more-collection" target="" href="/">
+                更多科研热点 <i class="el-icon-arrow-right"></i>
+            </a>
         </div>
     </div>
 
@@ -153,7 +296,7 @@
                        style="width: 93.5%;height:80px;padding-top:9px;padding-left: 0;margin-top: 15px">
                 <img src="./img/lighthouse.jpg" alt="灯塔名师微信公众号"
                      style="padding-left: 20px; height: 60px;width: 60px;display: inline;float: left;">
-                <ul class="info" style="display: inline;list-style: none;position: relative;left: 10px;">
+                <ul class="info" style="display: inline;position: relative;left: 10px;">
                     <li style="font-size: 16px;line-height: 20px;text-align: left;position: relative;top: -4px;">
                         微信关注灯塔名师
                     </li>
