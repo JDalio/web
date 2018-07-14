@@ -17,7 +17,7 @@
     .el-container {
         margin: auto;
         width: 960px;
-        height: 100%;
+        /*padding-bottom: 120px;*/
         box-sizing: border-box;
     }
 
@@ -107,8 +107,79 @@
         margin-left: 0;
     }
 
+    /* 推荐老师 */
+    .recommended-teachers {
+        margin-bottom: 20px;
+        margin-top: 25px;
+        padding-left: 60px;
+        font-size: 13px;
+        text-align: center;
+        /*background-color: #ea6f5a;*/
+    }
+
+    .recommended-teachers .title {
+        text-align: left;
+        font-size: 14px;
+        color: #969696;
+    }
+
+    .recommended-teachers .title .page-change {
+        float: right;
+        margin-right: 45px;
+        display: inline-block;
+        font-size: 14px;
+        color: #969696;
+    }
+
+    .recommended-teachers .title .page-change i {
+        display: inline-block;
+        line-height: 1;
+        transition: .5s ease;
+    }
+
+    .recommended-teachers .list {
+        margin: 0 0 20px;
+        text-align: left;
+        list-style: none;
+    }
+
+    .recommended-teachers .list li {
+        margin-top: 15px;
+        line-height: 20px;
+    }
+
+    .recommended-teachers .list .avatar {
+        float: left;
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .recommended-teachers .list .avatar img {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+    }
+
+    .recommended-teachers .list .name {
+        padding-top: 5px;
+        margin-right: 60px;
+        font-size: 14px;
+        display: block;
+    }
+
+    .recommended-teachers .list p {
+        margin-top: 2px;
+        font-size: 12px;
+        color: #969696;
+    }
     footer {
+        width: 100%;
         height: 120px;
+        margin-top: 40px;
         background-color: #D3DCE6;
     }
 
@@ -276,38 +347,75 @@
 
 
     <div class="el-aside">
+        <!-- 主要服务入口 -->
         <el-menu id="entrance">
-            <el-menu-item index="1" class="entrance-li" style="padding-left: 10px;">
+            <el-menu-item index="1" class="entrance-li">
                 <a href="/"> <img class="entrance-img" src="./img/kaoyan.png" alt="考研辅导"></a>
             </el-menu-item>
-            <el-menu-item index="2" class="entrance-li" style="padding-left: 10px;">
+            <el-menu-item index="2" class="entrance-li">
                 <a href="/"> <img class="entrance-img" src="./img/findexp.png" alt="找实验室"></a>
             </el-menu-item>
-            <el-menu-item index="3" class="entrance-li" style="padding-left: 10px;">
+            <el-menu-item index="3" class="entrance-li">
                 <a href="/"> <img class="entrance-img" src="./img/startsci.png" alt="科学启蒙教育"></a>
             </el-menu-item>
-            <el-menu-item index="4" class="entrance-li" style="margin-top:3px;padding-left: 10px;">
+            <el-menu-item index="4" class="entrance-li" style="margin-top:3px;">
                 <a href="/"> <img class="entrance-img" src="./img/findsch.png" alt="按学校找老师"></a>
             </el-menu-item>
         </el-menu>
-
+        <!-- 微信平台 -->
         <el-popover id="aside-wechat" placement="left-end" trigger="hover">
             <img src="./img/wechat.png" alt="微信联系我们" style="height: 100px; width:196px;">
             <el-button slot="reference"
-                       style="width: 93.5%;height:80px;padding-top:9px;padding-left: 0;margin-top: 15px">
+                       style="width: 93%;height:80px;padding-top:9px;margin-left:12px;margin-top: 15px">
                 <img src="./img/lighthouse.jpg" alt="灯塔名师微信公众号"
-                     style="padding-left: 20px; height: 60px;width: 60px;display: inline;float: left;">
+                     style="height: 60px;width: 60px;display: inline;float: left;">
                 <ul class="info" style="display: inline;position: relative;left: 10px;">
                     <li style="font-size: 16px;line-height: 20px;text-align: left;position: relative;top: -4px;">
                         微信关注灯塔名师
                     </li>
                     <li style="font-size: 13px;line-height: 28px;text-align: left;position: relative;top: -3px;">
-                        专注于考研辅导、实验室科研培训
+                        专注于考研辅导、科研培训
                     </li>
                 </ul>
             </el-button>
         </el-popover>
-
+        <!-- 推荐老师 -->
+        <div class="recommended-teachers">
+            <div class="title">
+                <span>推荐老师</span>
+                <a class="page-change"><i class="el-icon-refresh" style="transform: rotate(2520deg);"></i>换一换</a>
+            </div>
+            <ul class="list" style="padding-left: 0;">
+                <li>
+                    <a href="/" class="avatar">
+                        <img src="https://cdn2.jianshu.io/assets/default_avatar/14-0651acff782e7a18653d7530d6b27661.jpg">
+                    </a>
+                    <a href="/" class="name">武斌</a>
+                    <p>北京邮电大学理学院副教授</p>
+                </li>
+                <li>
+                    <a href="/" class="avatar">
+                        <img src="https://cdn2.jianshu.io/assets/default_avatar/14-0651acff782e7a18653d7530d6b27661.jpg">
+                    </a>
+                    <a href="/" class="name">武斌</a>
+                    <p>北京邮电大学理学院副教授</p>
+                </li>
+                <li>
+                    <a href="/" class="avatar">
+                        <img src="https://cdn2.jianshu.io/assets/default_avatar/14-0651acff782e7a18653d7530d6b27661.jpg">
+                    </a>
+                    <a href="/" class="name">武斌</a>
+                    <p>北京邮电大学理学院副教授</p>
+                </li>
+                <li>
+                    <a href="/" class="avatar">
+                        <img src="https://cdn2.jianshu.io/assets/default_avatar/14-0651acff782e7a18653d7530d6b27661.jpg">
+                    </a>
+                    <a href="/" class="name">武斌</a>
+                    <p>北京邮电大学理学院副教授</p>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 
